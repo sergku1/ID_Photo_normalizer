@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html  lang="ru-RU">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <title>ID_Helper.Help and Manual</title>
+ </head>
+  <body>
+   <font size="4" color="black">
+   <style>
+   p {margin-top: 0.25em; margin-bottom: 0.25em; text-indent: 25px;}
+   </style>
+   <table align="left" cellpadding="1" cellspacing="1" border="1" width="1250">
+    <tr>
+     <td align="left">
+     <p align="center"><h1>ID_Helper</h1></p>
+     <p align="center"><h2>User Manual</h2></p>
+<p><font color="red"><b></b></font></p>
+<p><font color="red"><b>Warning! Here is a standard disclaimer of any warranties and damages. The program was written for use in a team, and no harmful effects were taken into account when used.</b></font></p>
+<p><font color="red"><b>1.General rules</b></font></p>
+<p>The program is organized in such a way as to minimize switching between windows with mice. Note the <b>blinking cursor</b> in input fields - this prompt implies that input is expected in this field</p> 
+<p><b>Active buttons</b> are those that can be pressed - they are highlighted in a color characteristic of this method. </p>
+<p><b>Move to the next input window</b>by pressing Enter. You can use the Tab button to jump forward and Tab+Shift back. The same can be done with the mouse, but not so quickly.</p>
+<p>Button clicks can be performed using the <b>quick combination Alt+</b> the capitalized letter in the button name:Alt+x, Alt+T,Alt+p, Alt+n, Alt+g</p>
+<p>In the names of the client’s files and folders, his Name's parts is always in order: first name, middle name, last name. Some input fields (often) use the <b>auto-input function</b> - this means that input operations are reduced where possible. For example, entering the Name's parts looks like this: 
+first name, then patronymic (separated by a space) Enter last name Enter. Everything will be written in capital letters as it should. There are also hints: for example, when you start entering First Name, Patronymic, matching entries are dynamically displayed.</p>
+<p><b>Scrolling through client Fullnames records</b>to view entered ones is done with the mouse wheel anywhere on the screen, no need to move the mouse! If you need to <b>scroll through the pictures</b> (second spinbox on the screen) 
+you need to hold down Ctrl and then roll the mouse wheel or move the mouse cursor over the window of the second spinbox on the screen (on tab 1 it is under the graphic screen, on the right).</p>
+<p>The display is organized in lists of 10 people. An index is written under the scroll wheel consisting of the first letter of the first client on the screen (10 positions) and the first letter of the last one. If there are more than 10 name records starting with the same first and last letter, then a third element is added - the screen sequence number 1,2,3.</p>
+<p><b>Date</b> is always entered in the format dd-mm-yy if in auto-input or dd-mm-yyyy The auto-input date function only does: after entering the first two digits, inserts -, and waits for two more to be entered. There is no verification, so we can write mm-dd or dd-mm, as convenient. When entering the last two digits (year), 20 is added in front of them, based on the fact that the dates of documents for employees will not be met until 2000 </p>
+<p>On the right, on tab 1, there is an image window for viewing documents being processed. Scrolling with the scroll wheel under the image window or across the entire screen while holding down the Ctrl button. 
+<p>The source <b>graphic files</b> are located in the /dataFiles/Img folder. All incoming images should be placed there.</p>
+<p>In the process of filling out documents, <b>a text file with the extension .info is generated,</b> which is automatically named by the client’s First Name, Patronymic, Last Name (separated by a space) and placed in a folder with the same name, created in the folder Info/ The source document file is also placed in the same folder, automatically renamed by its full name, with an identifier of type ID or pass added separated by a space, depending on what kind of document it was and the file extension.jpeg.</p>  
+<p><b>When transferring files to personal folders, they are erased from the Inbox folder - /dataFiles/Img, but are also copied with the original name to the /dataFiles/Trash folder.</b> In general, the paths to these folders can be specified via a file configurations config.py </p>
+<p><font color="red"><b>2.Using the program</b></font></p>
+<p>Tab 1. <b>Initial condition</b> that the files that we want to add to cases and enter data into the System should be placed in the /dataFiles/Img folder. The .jpeg standard is used for documents. The program itself will convert and rename files if they are in the form of .jpg, .jpe, .bmp, .jp2, .png, .webp, .pgm Same with .pdf</p>
+<p><b>There seem to be no specific requirements for the names of image files added to this folder</b>; they are still renamed in accordance with the company’s internal standards. The same can be said about image resolution. It is important that it is not too small. Large images are shown in standard resolution. More precisely, they fit into the area 720x900.</p>
+<p><b>When you enter tab 1</b>,  is automatically checked is the checkbox in the Graphic Editor window and this part of the program is executed. It is designed to standardize the size of pictures, eliminate distortions due to shooting at an angle, with rotation, or when you need to crop off the excess part of the picture, rotate it, as well as gluing two pictures of different sides of the ID into one</p>
+<p>So, the files are placed in the appropriate folder, the program is launched.</p>
+<p>On the right side of the working window there is a graphics window for displaying graphic files from /dataFiles/Img. <b>You can scroll/change them</b> on the screen using the mouse wheel across the entire field while holding down the Ctrl key, or simply using the mouse wheel, but placed above the scroll window.</p>
+<p>When launching tab 1, we proceed from the assumption that the photos sent by clients <b>should be converted to a standard form</b>. To do this, you must first make sure that the appropriate input type is selected - from one page -pass, or from two -IDs using two radio buttons. If pass is selected, you should carefully mark the corners of the future image with the mouse.</p><p><b>Place the first point in the future left corner of the image, the second, third and fourth clockwise.</b>The entered points will be marked with yellow circles colors and connect lines to each other, forming a quadrangle at the end.<b>If you put the point incorrectly, you can roll back the action by pressing the Previous button (You can call Alt+p) </b></p>
+<p>Then, <b>pressing the compleTe button (You can call Alt+t)</b> will transform the selected area of ​​the image so that it occupies a rectangular area measuring 718x900. In this case, the image will be rotated so that the point marked first will be placed in the upper left corner. The sides will be stretched or compressed so that a regular quadrilateral is obtained. This will eliminate geometric distortions caused by shooting. <b>Cropping and transformation are performed with the input file at its maximum size</b>, before reduction - so that the clarity of the output image is maximized</p>
+<p><b>The Undo Previous</b>button pressed in the step before pressing the compleTe button will eliminate the temporary files, step by step. Incoming files will remain untouched. You can start over</p><p> <b>You can make changes and save the processed file</b> by clicking the compleTe button. In this case, the changed file will take the place of the input file (before transformation), and the input file will be sent to the Trash folder. The program will switch to text input mode so that you can enter data from the prepared graphic file.</p>
+<p><b>If you select ID and not pass</b>you need to enter 4 points on one image, then select another image (you can cut out both areas from one image) and also select 4 more points. In this case, the pictures will be scaled into two 718x450 images and then merged. <b>Two areas of 4 points each can be entered from one photo</b>. In this case, after entering the first four points, the marked points will disappear,this is normal</p>
+<p>Having received a suitable document image file, enter your first name/middle name in the first input window. The cursor is already there, the window is active, there is no need to use the mouse. We write the middle name directly with a small letter, separated by a space. <b>The program itself puts a capital letter where necessary</b></p>
+<p>Look at the top text screen “Customer Records”, customer records with similar names already existing in the system are displayed there, this is done to avoid erroneously re-entering completely identical records.</p>
+<p>After entering the Middle Name, or just the First Name, simply press Enter. You will be redirected to the next input window - Last names. No need to use a mouse! But you can</p>
+<p><b>The last name is also entered with a small letter, the letter increases itself</b></p>
+<p>Enter the name and number of the document as follows: i- if it is ID, or p – if it is pass. The system itself will add to the standard value. Immediately after that, without a space, enter the number. And then Enter. It will redirect to the window for entering the date of issue.</p>
+<p>In this window, <b>entering the date format is automated:</b> you need to enter two digits of the day (for example, 01), then two digits of the month, then the last two digits of the year. In the case of our document flow, the first two digits of the year can only be 20. It will look like this 011220 Enter, the window will display and write 01-12-2020.</p>
+<p>Then it will transfer to the next window - Where the document was issued. In this case, we just write what we need. Enter.</p>
+<p>In the ID pass/valid field, auto-entry also works, the date entry format is the same</p>
+<p>The rest of the fields are normal, only the address - all letters are made in capitals.</p>
+<p>Country. Standard two-letter designations for some countries are added as required. LT, LV, PL, ES, IT, BG. Others can be entered manually</p>
+<p><b>To save the entered data, press the Go-→</b> button. In the /Info folder, a folder will be created with the client’s First Name, Patronymic Last Name, and the renamed document file for which the data was entered + a text file with the entered information, with the same name and extension, will be written into it..info</p>
+      </td>
+    </tr>
+   </table>
+   </font>
+  </body>
+</html>
