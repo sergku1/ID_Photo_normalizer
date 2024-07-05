@@ -1,29 +1,20 @@
-"""Это конфигурационны файл для сохранения путей к файлам и других настроек версия для размещения в dataFiles"""
-# Путь к папке с входящими изображениями
-imageDir = '/home/sergku/PrgM/V2/Img'
+"""This is a configuration file for saving file paths and other settings, version"""
+# Path to the folder with incoming images
+imageD = '/Img'
 
-# Допустимые форматы файлов изображений
+# Acceptable image file formats
 imageExt = ['.jpeg', '.jpg', '.bmp', '.png', '.gif']
 
-# Путь к домашней папке
-homePath = '/home/sergku'
+# Path to the client records folder
+infoP = '/Info'
 
-# Путь к папке с записями клиентов
-infoPath = '/home/sergku/PrgM/V2/Info'
+# Path to the folder for used files
+trashD = '/Trash'
 
-# Путь к папке для отработанных файлов
-trashDir = '/home/sergku/PrgM/V2/Trash'
+# Path to the folder with temporary files
+TempD = '/tmpDir'
 
-# Путь к папке основной информации
-dataFiles = '/home/sergku/PrgM/V2'
-
-# Путь к папке с временными файлами
-Temp = '/home/sergku/PrgM/V2/tmpDir'
-
-# Путь к папке со служебными файлами программы
-Calculon = '/home/sergku/PrgM/V2/'
-
-# Стандартные размеры для вывода изображения Shir = width, Vys=height
+# Standard sizes for image display Shir = width, Vys=height
 Shir = 720
 Vys = 900
 Vys2 = 500
